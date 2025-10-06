@@ -1,9 +1,22 @@
 // Error 1:
 let message = 'Welcome to the debugging exercise!';
-console.log(mesage); 
+console.log(message); 
 
 // Error 2: 
-let button = document.querySelector('.actionButton'); 
+ console.log(document)
+
+//In JavaScript everything Is An Object
+
+
+
+
+
+
+ 
+let button = document.querySelector('#actionButton');
+console.log('Button#actionButton', button);
+
+
 button.addEventListener('click', eventHandler); 
 
 // Error 3: 
@@ -11,22 +24,25 @@ function eventHandler() {
   console.log('Button clicked');
   displayOutput();
 }
-
 // Error 4: 
 function displayOutput() {
   let output = document.querySelector('#output'); 
   output.innerText = 'You clicked the button!';
 }
+ 
+let localMessage;
 
-// Error 6: Misusing variable scope
+// Error 6: Missing variable scope
 function updateMessage() {
-  let localMessage = 'Updated message';
-}
+  localMessage = 'Updated message'; 
+} 
+
 updateMessage();
-console.log(localMessage); 
+console.log(localMessage);
 
 // Error 7:
 document.getElementById('testButton').addEventListener('click', testFunction());
+
 
 function testFunction() {
   console.log('Test function executed');
@@ -39,42 +55,59 @@ console.log('Sum is: ' + (number1 - number2));
 
 // Error 9: 
 let nullVar = null;
-console.log(nullVar.length);
+console.log(nullVar);
 
 // Error 10:
 let caseSensitiveVar = 'Case matters';
-console.log(CaseSensitiveVar);
+console.log(caseSensitiveVar);
 
 // Error 11:
 let importantData =
   "This string must be logged to the console. It's important!";
-console.log('importantData');
+console.log(importantData);
 
 // Error 12: 
-tryToCallFunction();
+//This is not defined
+//tryToCallFunction();
 
 // Error 13:
-let user = { namee: 'Alice' };
+let user = { 
+  name: 'Alice',
+  age:18
+};
+
+
 console.log(user.name)
 
 // Error 14: 
 let someNumber = 123;
-console.log(someNumber.toUpperCase()); 
+console.log(someNumber); 
+
+let textToUpper = 'something to upper'; 
+console.log(textToUpper.toUpperCase());
 
 // Error 15: 
-let greeting = Hello, world!;
+/* There are just 3 types of variables
+ 1. let -> 
+ 2. const -> values that cannot be changed
+ 3. var -> for variables that its value can be updated
+*/
+
+let greeting = "Hello, world!";
 
 // Error 16: 
-for (let i = 0; i < 5; i++); {
+for (let i = 0; i < 5; i++) {
     console.log(i);
 }
 
 // Error 17:
 let five = '5';
+
 if (five === 5) {
     console.log('Five is equal to 5'); // This one should be logged
 } else {
     console.log('Five is not equal to 5'); 
+}
 
 // Error 18:
 Array.prototype.push = function() {
@@ -85,11 +118,12 @@ numbers.push(1);
 console.log(numbers);
 
 // Error 19:
+ x = 5;
 console.log(x);
-x = 5;
+
 
 // Error 20:
-let myString = 'Hello';
-myString.property = 'World';
-console.log(myString.property); 
+let myString = 'Hello World';
+
+console.log(myString); 
 
